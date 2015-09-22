@@ -1,0 +1,33 @@
+import android.app.Activity;
+import android.os.Bundle;
+ 
+import com.google.android.gms.ads.*;
+ 
+public class Anasayfa extends Activity {
+     AdView adView;
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.anasayfa);
+ 
+    //Burda AdView objesini oluşturuyoruz ve anasayfa.xml de oluşturduğumuz adView e bağlıyoruz
+    AdView adView = (AdView) this.findViewById(R.id.adView);
+    AdRequest adRequest = new AdRequest.Builder().build();
+    adView.loadAd(adRequest); //adView i yüklüyoruz
+ 
+    /*
+     *
+     * if (adView != null) {
+        adView.pause();// reklamı durdurur
+      }
+ 
+    if (adView != null) {
+        adView.resume(); // reklamı başlatır
+      }
+ 
+    if (adView != null) {
+        adView.destroy();//reklamı tamamen yok eder
+      }
+    */
+  }
+ 
