@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arkadaşlar burda dikkat etmemiz gereken husus
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+ 
+            bu iki satırı en üstteki layouta koymamız gerekmektedir.
+            Linear yada Relative Layout olabilir . 
+ 
+ -->
+ 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+              <!-- Burda
+              ads:adUnitId="ca-app-pub-6311389967106147/779319xxxx" burdaki id
+              AdMob da reklam oluşturduğumuzda bize verilen Reklam birimi kimliği dir
+              Bu alana kendi reklam kimliğinizi gireceksiniz.
+              Son 4 haneyi xxxx yapmamın sebebi Google Kötüye kullanımdan benide banlayabilir.
+               -->
+  <com.google.android.gms.ads.AdView android:id="@+id/adView"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="ca-app-pub-6311389967106147/779319xxxx"
+                         ads:adSize="BANNER"/>
+ 
+</LinearLayout>
